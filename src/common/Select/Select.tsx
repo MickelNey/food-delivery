@@ -1,7 +1,5 @@
 import styles from './Select.module.scss'
 import React from "react";
-import user from '../../icons/user.svg';
-import cart from '../../icons/cart.svg';
 
 interface SelectType extends React.ButtonHTMLAttributes<HTMLButtonElement>{
   active?: boolean;

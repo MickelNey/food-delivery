@@ -1,6 +1,6 @@
-import { StateInfo} from "./states";
+import { StateInfo} from "../../../types/RegistrationType";
 
-export const AccountTypeInfo: StateInfo = {
+const AccountTypeInfo: StateInfo = {
   points: [{
     name: 'Account Type',
     point: 'active'
@@ -17,7 +17,7 @@ export const AccountTypeInfo: StateInfo = {
   title: 'Sign Up'
 }
 
-export const PersonalDetailsInfo: StateInfo = {
+const PersonalDetailsInfo: StateInfo = {
   points: [{
     name: 'Account Type',
     point: 'done'
@@ -34,7 +34,7 @@ export const PersonalDetailsInfo: StateInfo = {
   title: 'Personal details'
 }
 
-export const AdditionalInfoInfo: StateInfo = {
+const AdditionalInfoInfo: StateInfo = {
   points: [{
     name: 'Account Type',
     point: 'done'
@@ -51,7 +51,7 @@ export const AdditionalInfoInfo: StateInfo = {
   title: 'Additional Info'
 }
 
-export const ConfirmationInfo: StateInfo = {
+const ConfirmationInfo: StateInfo = {
   points: [{
     name: 'Account Type',
     point: 'done'
@@ -66,4 +66,11 @@ export const ConfirmationInfo: StateInfo = {
     point: 'active'
   }],
   title: 'Confirmation'
+}
+
+export const info = {
+  accountType: AccountTypeInfo,
+  personalDetails: PersonalDetailsInfo,
+  additionalInfo: AdditionalInfoInfo,
+  confirmation: ConfirmationInfo
 }

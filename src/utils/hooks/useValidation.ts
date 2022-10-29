@@ -4,7 +4,7 @@ export const useValidation = (value: string, regExp: RegExp): [string, (e: React
   const [text, setText] = useState(value)
   const valid = useMemo(() => {
     return regExp.test(text)
-  }, [text])
+  }, [text, regExp])
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value)
   }

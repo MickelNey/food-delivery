@@ -1,1 +1,2 @@
-export * from './types'
+export * from './MainTypes'
+export * from './RegistrationType'

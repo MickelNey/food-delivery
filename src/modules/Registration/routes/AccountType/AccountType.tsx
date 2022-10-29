@@ -1,21 +1,23 @@
 import React, { useState} from "react";
 
-import styles from "./AccountTypePanel.module.scss";
-
+import styles from "./AccountType.module.scss";
 import {Panel} from "../Panel";
 import {Select, Button} from "common";
 
-import {ProtoStateData} from "../../../model/states";
-import {useOnContinue} from "../../../api";
+import {StateData} from "types";
+import {info} from "../../data/stateInfo";
+
+import {useAppDispatch} from "store/hooks";
+import { RegistrationSlice } from "store/reducers/RegistrationReducer";
 
 
-export const AccountTypePanel = ( { stateInfo, userInfo }: ProtoStateData) => {
-  const [typeAccount, setTypeAccount]  = useState(userInfo.typeAccount)
-  const handleOnClick = useOnContinue()
+export const AccountType = ( data: StateData) => {
+  const [typeAccount, setTypeAccount]  = useState(data.typeAccount)
+  const dispatch = useAppDispatch()
+  const handleOnClick = () => dispatch(RegistrationSlice.actions.addAccountType(typeAccount))
 
-  console.log(userInfo)
   return (<>
-    <Panel {...stateInfo}>
+    <Panel { ...info.accountType }>
       <div className={`${styles.userInfo}`}>
         <Select
           active={typeAccount === 'restaurant'}
@@ -33,7 +35,7 @@ export const AccountTypePanel = ( { stateInfo, userInfo }: ProtoStateData) => {
         />
         <Button
           className={styles.Button_container}
-          onClick={() => handleOnClick({...userInfo, typeAccount})}
+          onClick={() => handleOnClick()}
         />
       </div>
     </Panel>

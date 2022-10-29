@@ -1,9 +1,8 @@
 import styles from './Point.module.scss';
-import {PointName} from "../../model/states";
+import {PointType} from "../../types/RegistrationType";
 import React from "react";
 
-
-type StepProps = PointName
+type StepProps = PointType
 
 export const Point: React.FC<StepProps> = ({ point, name }) => {
   const style = {

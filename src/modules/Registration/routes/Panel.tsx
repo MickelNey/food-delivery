@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Panel.module.scss";
 
-import {StateInfo} from "../../model/states";
-import {Point} from "../Point/Point";
+import { StateInfo } from "types";
+import { Point } from "components";
 
 interface PanelProps extends StateInfo{
   children?: any

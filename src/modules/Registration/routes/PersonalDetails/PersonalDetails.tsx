@@ -1,24 +1,29 @@
 import React from "react";
 
-import styles from "./PersonalDetailsPanel.module.scss";
+import styles from "./PersonalDetails.module.scss";
 import {Panel} from "../Panel";
 import {BackButton, Input, Button} from "common";
 
-import {ProtoStateData} from "../../../model/states";
+import {StateData} from "types";
 
-import {useOnBack, useOnContinue, useValidation} from "../../../api/";
-import { validRegExp } from "../../../model/validRegExp";
+import { useValidation} from "utils/hooks";
+import { validRegExp } from "../../data/validRegExp";
 
-export const PersonalDetailsPanel = (
-  { stateInfo, userInfo }: ProtoStateData) => {
-  const [email, setEmail, emailValid] = useValidation(userInfo.email, validRegExp.email)
-  const [password, setPassword, passwordValid] = useValidation(userInfo.password, validRegExp.password)
-  const [confirmPass, setConfirmPass, confirmPassValid] = useValidation(userInfo.password, validRegExp.password)
-  const handleOnClick = useOnContinue()
-  const handleOnBackClick = useOnBack()
+import {useAppDispatch} from "store/hooks";
+import {RegistrationSlice} from "store/reducers/RegistrationReducer";
+import {info} from "../../data/stateInfo";
+
+export const PersonalDetails = ( data: StateData) => {
+  const [email, setEmail, emailValid] = useValidation(data.email, validRegExp.email)
+  const [password, setPassword, passwordValid] = useValidation(data.password, validRegExp.password)
+  const [confirmPass, setConfirmPass, confirmPassValid] = useValidation(data.password, validRegExp.password)
+
+  const dispatch = useAppDispatch()
+  const handleOnClick = () => dispatch(RegistrationSlice.actions.addPersonalDetails({email, password}))
+  const handleOnBackClick = () => dispatch(RegistrationSlice.actions.back())
 
   return (<>
-    <Panel {...stateInfo}>
+    <Panel { ...info.personalDetails}>
       <div className={styles.userInfo}>
         <Input className={styles.Input}
                title='Email'
@@ -46,7 +51,7 @@ export const PersonalDetailsPanel = (
         <Button
           className={styles.Button_container}
           disabled={(!passwordValid || !emailValid) || (password !== confirmPass)}
-          onClick={() => handleOnClick({...userInfo, email, password})}
+          onClick={() => handleOnClick()}
         />
         <BackButton onClick={() => handleOnBackClick()}/>
       </div>

@@ -1,31 +1,35 @@
 import React, {useState} from "react";
-import {ProtoStateData} from "../../../model/states";
 
-import styles from "./ConfirmationPanel.module.scss";
+import styles from "./Confirmation.module.scss"
 import {Panel} from "../Panel";
 import {BackButton, CheckBox, Input, Button} from "common";
 
-import {useOnComplete, useValidation, useOnBack} from "../../../api/";
-import { validRegExp } from "../../../model/validRegExp";
+import {StateData} from "types";
+
+import {info} from "../../data/stateInfo";
+import { validRegExp } from "../../data/validRegExp";
+
+import { useValidation } from "utils/hooks";
 import { Link, useNavigate} from "react-router-dom";
+import {useAppDispatch} from "store/hooks";
+import {RegistrationSlice} from "store/reducers/RegistrationReducer";
 
-
-
-
-export const ConfirmationPanel = (
-  { stateInfo, userInfo }: ProtoStateData) => {
+export const Confirmation = ( data: StateData) => {
   const [code, setCode, codeValid] = useValidation('', validRegExp.code)
-  const [rememberDevice, setRememberDevice] = useState(userInfo.rememberDevice)
-  const handleOnBackClick = useOnBack()
-  const handleCompleteClick = useOnComplete()
-  const navigate = useNavigate()  // to FIX
+  const [rememberDevice, setRememberDevice] = useState(data.rememberDevice)
+
+  const dispatch = useAppDispatch()
+  const handleOnBackClick = () => dispatch(RegistrationSlice.actions.back())
+  const handleCompleteClick = () => dispatch(RegistrationSlice.actions.complete(rememberDevice))
+
+  const navigate = useNavigate()  // FIX
   const routeChange = () =>{      //
     let path = `/main`;           //
     navigate(path);               //
   }                               //
 
   return (<>
-    <Panel {...stateInfo}>
+    <Panel { ...info.confirmation }>
       <div className={styles.userInfo}>
         <Input className={styles.Input}
                title='Phone number'
@@ -41,7 +45,7 @@ export const ConfirmationPanel = (
           className={styles.Button_container}
           disabled={!codeValid}
           onClick={() => {
-            handleCompleteClick(rememberDevice)
+            handleCompleteClick()
             routeChange()
           }}
         >
