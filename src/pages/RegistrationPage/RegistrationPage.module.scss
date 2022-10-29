@@ -1,0 +1,42 @@
+.page {
+}
+
+.container {
+    max-width: var(--content-width);
+    margin: 0 0 0 10px;
+}
+
+.registration {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    background-color: var(--primary-hover);
+    margin: 0 0 0 0;
+    height: 100%;
+    width: 44%;
+    color: #fff;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &_content {
+        padding: 20px 0 0 0;
+        max-width: 445px;
+        height: 100%;
+    }
+    &_title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        max-width: 389px;
+        margin: 19% 0 0 0;
+    }
+
+}
+
+.right {
+    background-color: white;
+    padding: 0 0 0 8%;
+}

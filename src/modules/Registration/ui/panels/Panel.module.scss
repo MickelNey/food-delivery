@@ -1,0 +1,23 @@
+$per: calc((84 / 860) );
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  height: 100vh;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: var(--neutral-black);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 82px;
+  margin-bottom: 6vh;
+}
+
+.steps {
+  display: flex;
+  margin-bottom: 9.7vh;
+}
