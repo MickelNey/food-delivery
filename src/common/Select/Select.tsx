@@ -1,4 +1,3 @@
-
 import styles from './Select.module.scss'
 import React from "react";
 import user from '../../icons/user.svg';
@@ -16,7 +15,6 @@ export const Select: React.FC<SelectType> = (
     label,
     secondLabel,
     ...props }) => {
-
   return (<button className={`${styles.select} ${active ? styles.select_active : ''}` } {...props}>
       <div className={`${styles.icon} ${active ? styles.icon_active : ''} ${className}`}>
       </div>

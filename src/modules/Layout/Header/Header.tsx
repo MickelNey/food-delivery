@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Header.module.scss'
-import { SearchInput } from "@common";
+import { SearchInput } from "common";
 import {Cart, Navigation, Avatar} from "./header-items";
 
 

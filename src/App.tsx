@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import { MainPage, RegistrationPage} from '@pages';
+import { MainPage, RegistrationPage} from 'pages';
 import { Layout } from "modules/Layout";
 import './static/css/icon-fonts.css'
 import styles from './App.module.scss'

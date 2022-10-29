@@ -3,7 +3,7 @@ import {ProtoStateData} from "../../../model/states";
 
 import styles from "./ConfirmationPanel.module.scss";
 import {Panel} from "../Panel";
-import {BackButton, CheckBox, Input, Button} from "@common";
+import {BackButton, CheckBox, Input, Button} from "common";
 
 import {useOnComplete, useValidation, useOnBack} from "../../../api/";
 import { validRegExp } from "../../../model/validRegExp";

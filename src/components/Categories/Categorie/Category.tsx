@@ -1,5 +1,5 @@
 import styles from './Category.module.scss'
-import { CategoryType } from "@types";
+import { CategoryType } from "types";
 
 type CategoryProps = CategoryType
 

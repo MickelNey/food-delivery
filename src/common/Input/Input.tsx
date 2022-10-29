@@ -7,7 +7,6 @@ interface InputProps extends React.HTMLProps<HTMLInputElement> {
   valid?: boolean
 }
 
-
 export const Input: React.FC<InputProps> = ({
                                               title = 'form',
                                               valid = false,

@@ -1,5 +1,5 @@
 import { useState, useEffect} from 'react'
-import { service } from "@utils";
+import { service } from "utils";
 
 export const useQuery = <T>(endpoint: string) => {
   const [items, setItems] = useState<T[]>([])

@@ -1,5 +1,5 @@
 import styles from './Restaurant.module.scss'
-import {RestaurantType} from "@types";
+import {RestaurantType} from "types";
 type RestaurantProps = RestaurantType
 
 export const Restaurant = ({name, imageUrl, time, minSum, categories, featured}: RestaurantProps) => {

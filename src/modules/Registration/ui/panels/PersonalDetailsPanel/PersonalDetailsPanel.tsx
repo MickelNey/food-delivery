@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./PersonalDetailsPanel.module.scss";
 import {Panel} from "../Panel";
-import {BackButton, Input, Button} from "@common";
+import {BackButton, Input, Button} from "common";
 
 import {ProtoStateData} from "../../../model/states";
 

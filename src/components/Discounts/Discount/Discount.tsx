@@ -1,5 +1,5 @@
 import styles from './Discount.module.scss';
-import {DiscountType} from "@types";
+import {DiscountType} from "types";
 
 type DiscountProps = DiscountType
 

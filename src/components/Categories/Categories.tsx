@@ -2,8 +2,8 @@ import React from "react";
 
 import styles from './Categories.module.scss'
 import {Category} from "./Categorie/Category";
-import { CategoryType} from "@types";
-import {useQuery} from "@utils";
+import { CategoryType} from "types";
+import {useQuery} from "utils";
 
 export const Categories = () => {
   let categories = useQuery<CategoryType>('categories')

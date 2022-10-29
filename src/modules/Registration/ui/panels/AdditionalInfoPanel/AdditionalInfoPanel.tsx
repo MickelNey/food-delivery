@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import styles from "./AdditionalInfoPanel.module.scss";
 import {Panel} from "../Panel";
-import {BackButton, CheckBox, Input, Button} from "@common";
+import {BackButton, CheckBox, Input, Button} from "common";
 
 import {ProtoStateData} from "../../../model/states";
 import {useOnBack, useValidation, useOnContinue} from "../../../api/";

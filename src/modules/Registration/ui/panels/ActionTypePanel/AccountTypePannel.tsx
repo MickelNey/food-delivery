@@ -3,7 +3,7 @@ import React, { useState} from "react";
 import styles from "./AccountTypePanel.module.scss";
 
 import {Panel} from "../Panel";
-import {Select, Button} from "@common";
+import {Select, Button} from "common";
 
 import {ProtoStateData} from "../../../model/states";
 import {useOnContinue} from "../../../api";

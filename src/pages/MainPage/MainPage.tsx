@@ -1,5 +1,5 @@
 import React from 'react';
-import {Categories, Discounts, Restaurants} from "@components";
+import {Categories, Discounts, Restaurants} from "components";
 import styles from './MainPage.module.scss'
 import {Page} from "../Page";
 

@@ -1,8 +1,8 @@
 import styles from './Discounts.module.scss';
 import React from "react";
 import {Discount} from "./Discount/Discount";
-import {useQuery} from "@utils";
-import {DiscountType} from "@types";
+import {useQuery} from "utils";
+import {DiscountType} from "types";
 
 
 export const Discounts = () => {
