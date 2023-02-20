@@ -162,5 +162,154 @@
       "imageUrl": "/images/discount/2.svg",
       "color": "orange"
     }
-  ]
+  ],
+  "products": {
+    "categories": [
+      {
+        "id": "1",
+        "name": "Pizza",
+        "imageUrl": "images/category/pizza.svg"
+      },
+      {
+        "id": "2",
+        "name": "Burger",
+        "imageUrl": "images/category/burger.svg"
+      },
+      {
+        "id": "3",
+        "name": "Cake",
+        "imageUrl": "images/category/cake.svg"
+      },
+      {
+        "id": "4",
+        "name": "Broccoli",
+        "imageUrl": "images/category/broccoli.svg"
+      },
+      {
+        "id": "5",
+        "name": "Sushi",
+        "imageUrl": "images/category/sushi.svg"
+      },
+      {
+        "id": "6",
+        "name": "Meat",
+        "imageUrl": "images/category/meat.svg"
+      }
+    ],
+    "restaurants": [
+      {
+        "id": "1",
+        "name": "Royal Sushi House",
+        "time": "30-40 min",
+        "minSum": "$32",
+        "categories": [
+          {
+            "id": "5",
+            "name": "Sushi",
+            "imageUrl": "images/category/sushi.svg"
+          }
+        ],
+        "featured": true,
+        "imageUrl": "images/restaurant/royal-sushi-house.jpg"
+      },
+      {
+        "id": "2",
+        "name": "Burgers & Pizza",
+        "time": "40-60 min",
+        "minSum": "$24",
+        "categories": [
+          {
+            "id": "1",
+            "name": "Pizza",
+            "imageUrl": "images/category/pizza.svg"
+          },
+          {
+            "id": "2",
+            "name": "Burger",
+            "imageUrl": "images/category/burger.svg"
+          }
+        ],
+        "featured": true,
+        "imageUrl": "images/restaurant/burgers-and-pizza.jpg"
+      },
+      {
+        "id": "3",
+        "name": "Ninja sushi",
+        "time": "20-40 min",
+        "categories": [
+          {
+            "id": "5",
+            "name": "Sushi",
+            "imageUrl": "images/category/sushi.svg"
+          }
+        ],
+        "minSum": "$40",
+        "featured": false,
+        "imageUrl": "images/restaurant/ninja-sushi.jpg"
+      },
+      {
+        "id": "4",
+        "name": "Sushi master",
+        "time": "60-70 min",
+        "categories": [
+          {
+            "id": "5",
+            "name": "Sushi",
+            "imageUrl": "images/category/sushi.svg"
+          }
+        ],
+        "minSum": "$49",
+        "featured": false,
+        "imageUrl": "images/restaurant/sushi-master.jpg"
+      },
+      {
+        "id": "5",
+        "name": "Sushi master",
+        "time": "60-70 min",
+        "categories": [
+          {
+            "id": "5",
+            "name": "Sushi",
+            "imageUrl": "images/category/sushi.svg"
+          }
+        ],
+        "minSum": "$49",
+        "featured": false,
+        "imageUrl": "images/restaurant/sushi-master.jpg"
+      },
+      {
+        "id": "6",
+        "name": "Sushi master",
+        "time": "60-70 min",
+        "categories": [
+          {
+            "id": "5",
+            "name": "Sushi",
+            "imageUrl": "images/category/sushi.svg"
+          }
+        ],
+        "minSum": "$49",
+        "featured": false,
+        "imageUrl": "images/restaurant/sushi-master.jpg"
+      }
+    ],
+    "discounts": [
+      {
+        "id": "1",
+        "name": "All deserts",
+        "percent": 20,
+        "category": "Deserty",
+        "imageUrl": "/images/discount/1.svg",
+        "color": "blue"
+      },
+      {
+        "id": "2",
+        "name": "Big Burgers",
+        "percent": 50,
+        "category": "Foodies",
+        "imageUrl": "/images/discount/2.svg",
+        "color": "orange"
+      }
+    ]
+  }
 }
